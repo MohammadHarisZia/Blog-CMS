@@ -202,12 +202,12 @@ class User extends Authenticatable
     }
 
 
-    protected static function booted()
-    {
-        static::updated(queueable(function ($customer) {
-            $customer->syncStripeCustomerDetails();
-        }));
-    }
+    // protected static function booted()
+    // {
+    //     static::updated(queueable(function ($customer) {
+    //         $customer->syncStripeCustomerDetails();
+    //     }));
+    // }
 
     // Social
     public function bioProfile()
